@@ -94,6 +94,8 @@ module NetSuite
     autoload :PhoneCall,                  'netsuite/records/phone_call'
     autoload :PricingMatrix,              'netsuite/records/pricing_matrix'
     autoload :PurchaseOrder,              'netsuite/records/purchase_order'
+    autoload :PurchaseOrderExpense,       'netsuite/records/purchase_order_expense'
+    autoload :PurchaseOrderExpenseList,   'netsuite/records/purchase_order_expense_list'
     autoload :PurchaseOrderItem,          'netsuite/records/purchase_order_item'
     autoload :PurchaseOrderItemList,      'netsuite/records/purchase_order_item_list'
     autoload :RecordRef,                  'netsuite/records/record_ref'
