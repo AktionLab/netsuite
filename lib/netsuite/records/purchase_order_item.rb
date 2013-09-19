@@ -6,7 +6,7 @@ module NetSuite
       include Support::Records
       include Namespaces::TranPurch
 
-      field :inventory_detail, InventoryDetail
+      #field :inventory_detail, InventoryDetail
       field :custom_field_list, CustomFieldList
       field :options, CustomFieldList
 
