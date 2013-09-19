@@ -16,7 +16,7 @@ module NetSuite
     autoload :ListSupport,    'netsuite/namespaces/list_support'
     autoload :PlatformCommon, 'netsuite/namespaces/platform_common'
     autoload :PlatformCore,   'netsuite/namespaces/platform_core'
-    autoload :TranPurch,      'netsuite/namespaces/tran_purch',
+    autoload :TranPurch,      'netsuite/namespaces/tran_purch'
     autoload :TranCust,       'netsuite/namespaces/tran_cust'
     autoload :TranGeneral,    'netsuite/namespaces/tran_general'
     autoload :TranSales,      'netsuite/namespaces/tran_sales'
