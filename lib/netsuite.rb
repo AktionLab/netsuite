@@ -16,6 +16,7 @@ module NetSuite
     autoload :ListSupport,    'netsuite/namespaces/list_support'
     autoload :PlatformCommon, 'netsuite/namespaces/platform_common'
     autoload :PlatformCore,   'netsuite/namespaces/platform_core'
+    autoload :TranPurch,      'netsuite/namespaces/tran_purch',
     autoload :TranCust,       'netsuite/namespaces/tran_cust'
     autoload :TranGeneral,    'netsuite/namespaces/tran_general'
     autoload :TranSales,      'netsuite/namespaces/tran_sales'
@@ -92,6 +93,9 @@ module NetSuite
     autoload :PaymentMethod,              'netsuite/records/payment_method'
     autoload :PhoneCall,                  'netsuite/records/phone_call'
     autoload :PricingMatrix,              'netsuite/records/pricing_matrix'
+    autoload :PurchaseOrder,              'netsuite/records/purchase_order'
+    autoload :PurchaseOrderItem,          'netsuite/records/purchase_order_item'
+    autoload :PurchaseOrderItemList,      'netsuite/records/purchase_order_item_list'
     autoload :RecordRef,                  'netsuite/records/record_ref'
     autoload :RevRecTemplate,             'netsuite/records/rev_rec_template'
     autoload :SalesOrder,                 'netsuite/records/sales_order'
