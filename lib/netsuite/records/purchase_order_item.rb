@@ -10,7 +10,7 @@ module NetSuite
       field :custom_field_list, CustomFieldList
       field :options, CustomFieldList
 
-      record_refs :klass, :customer, :department, :item, :landed_cost_category, :location, :tax_code, :units platformCore:RecordRef
+      record_refs :klass, :customer, :department, :item, :landed_cost_category, :location, :tax_code, :units
 
       #field :bill_variance_status, TransactionBillVarianceStatus
 
