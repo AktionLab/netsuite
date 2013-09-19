@@ -13,7 +13,7 @@ module NetSuite
       field :transaction_ship_address, ShipAddress
       field :custom_field_list, CustomFieldList
 
-      #field :expense_list, PurchaseOrderExpenseList
+      field :expense_list, PurchaseOrderExpenseList
       field :item_list, PurchaseOrderItemList
       #field :order_status, PurchaseOrderOrderStatus
 
