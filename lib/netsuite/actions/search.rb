@@ -4,7 +4,14 @@ module NetSuite
       include Support::Requests
 
       def initialize(klass, options = { })
-        @klass = klass
+        # TODO
+        # Fix this hack so that searching InventoryItems doesn't rely on using the class name,
+        # since its an ItemSearch, there is no InventoryItemSearch
+        if klass == NetSuite::Records::InventoryItem
+          @klass = NetSuite::Records::Item
+        else
+          @klass = klass
+        end
         @options = options
       end
 
@@ -29,6 +36,7 @@ module NetSuite
             'xmlns:platformMsgs' => "urn:messages_#{api_version}.platform.webservices.netsuite.com",
             'xmlns:platformCore' => "urn:core_#{api_version}.platform.webservices.netsuite.com",
             'xmlns:platformCommon' => "urn:common_#{api_version}.platform.webservices.netsuite.com",
+            'xmlns:listAcct' => "urn:accounting_#{api_version}.lists.webservices.netsuite.com",
             'xmlns:listRel' => "urn:relationships_#{api_version}.lists.webservices.netsuite.com",
             'xmlns:tranSales' => "urn:sales_#{api_version}.transactions.webservices.netsuite.com",
             'xmlns:setupCustom' => "urn:customization_#{api_version}.setup.webservices.netsuite.com"
