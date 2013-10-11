@@ -20,6 +20,7 @@ module NetSuite
         :vsoe_auto_calc
 
       field :transaction_bill_address, BillAddress
+      field :transaction_ship_address, ShipAddress
       field :item_list,                SalesOrderItemList
       field :custom_field_list,        CustomFieldList
 
