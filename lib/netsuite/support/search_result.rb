@@ -26,7 +26,8 @@ module NetSuite
             record_list = [record_list] if @total_records == 1
 
             record_list.each do |record|
-              results << result_class.new(record)
+              record_class = ("NetSuite::Records::" + record[:"@xsi:type"].split(":").last).constantize
+              results << record_class.new(record)
             end
           elsif response.body.has_key? :search_row_list
             # advanced search results
