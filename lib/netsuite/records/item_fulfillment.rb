@@ -1,18 +1,18 @@
 module NetSuite
   module Records
-  	class ItemFulfillment
-		include Support::Fields
-		include Support::RecordRefs
-		include Support::Records
-		include Support::Actions
-		include Namespaces::TranSales
+    class ItemFulfillment
+      include Support::Fields
+      include Support::RecordRefs
+      include Support::Records
+      include Support::Actions
+      include Namespaces::TranSales
 
-  		actions :get, :add, :initialize, :delete
+      actions :get, :add, :initialize, :delete
 
       fields :tran_date, :tran_id, :shipping_cost, :memo, :ship_company, :ship_attention, :ship_addr1,
         :ship_addr2, :ship_city, :ship_state, :ship_zip, :ship_phone, :ship_is_residential
 
-      read_only_fields :handling_cost
+      read_only_fields :handling_cost, :created_date
 
       record_refs :custom_form, :entity, :created_from, :ship_carrier, :ship_method, 
         :ship_address_list, :klass, :ship_country
