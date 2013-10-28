@@ -87,6 +87,8 @@ module NetSuite
     autoload :ItemFulfillment,            'netsuite/records/item_fulfillment'
     autoload :ItemFulfillmentItem,        'netsuite/records/item_fulfillment_item'
     autoload :ItemFulfillmentItemList,    'netsuite/records/item_fulfillment_item_list'
+    autoload :ItemFulfillmentPackageFedEx,     'netsuite/records/item_fulfillment_package_fed_ex'
+    autoload :ItemFulfillmentPackageFedExList, 'netsuite/records/item_fulfillment_package_fed_ex_list'
     autoload :Job,                        'netsuite/records/job'
     autoload :JournalEntry,               'netsuite/records/journal_entry'
     autoload :JournalEntryLine,           'netsuite/records/journal_entry_line'

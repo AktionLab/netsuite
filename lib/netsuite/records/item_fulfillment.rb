@@ -7,10 +7,11 @@ module NetSuite
       include Support::Actions
       include Namespaces::TranSales
 
-      actions :get, :add, :initialize, :delete
+      actions :get, :get_list, :add, :initialize, :delete
 
       fields :tran_date, :tran_id, :shipping_cost, :memo, :ship_company, :ship_attention, :ship_addr1,
-        :ship_addr2, :ship_city, :ship_state, :ship_zip, :ship_phone, :ship_is_residential
+        :ship_addr2, :ship_city, :ship_state, :ship_zip, :ship_phone, :ship_is_residential,
+        :package_fed_ex_list
 
       read_only_fields :handling_cost, :created_date
 
@@ -38,6 +39,6 @@ module NetSuite
         rec
       end
 
-  	end
+    end
   end
 end
