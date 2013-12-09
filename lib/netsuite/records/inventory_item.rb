@@ -30,7 +30,8 @@ module NetSuite
         :shopping_dot_com_category, :shopzilla_category_id, :show_default_donation_amount, :sitemap_priority,
         :specials_description, :stock_description, :store_description, :store_detailed_description, :store_display_name,
         :total_value, :track_landed_cost, :transfer_price, :upc_code, :url_component, :use_bins, :use_marginal_rates,
-        :vendor_name, :vsoe_deferral, :vsoe_delivered, :vsoe_permit_discount, :vsoe_price, :weight, :weight_unit, :weight_units
+        :vendor_name, :vsoe_deferral, :vsoe_delivered, :vsoe_permit_discount, :vsoe_price, :weight, :weight_unit, :weight_units,
+        :other_prices
 
       record_refs :alternate_demand_source_item, :asset_account, :bill_exch_rate_variance_acct, :bill_price_variance_acct,
         :bill_qty_variance_acct, :billing_schedule, :cogs_account, :cost_category, :custom_form, :deferred_revenue_account,
