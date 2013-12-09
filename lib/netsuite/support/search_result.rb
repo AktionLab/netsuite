@@ -71,6 +71,18 @@ module NetSuite
         @results ||= []
       end
 
+      def all_results
+        all_results = [results]
+
+        pages = @response.body[:total_pages].to_i - 1
+
+        pages.times do |n|
+          all_results += @result_class.search(search_id: @response.body[:search_id], page_index: n + 2).results
+        end
+
+        all_results.flatten
+      end
+
       def results_in_batches
         while @response.body[:total_pages] != @response.body[:page_index]
           yield results
@@ -84,7 +96,6 @@ module NetSuite
           @response = next_search.response
         end
       end
-
     end
   end
 end
