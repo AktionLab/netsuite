@@ -61,7 +61,13 @@ module NetSuite
       end
 
       def response_body
-        @response_body ||= response_hash[:base_ref]
+        @response_body ||= begin
+          if success?
+            response_hash[:base_ref]
+          else
+            response_hash[:status][:status_detail]
+          end
+        end
       end
 
       def response_hash
@@ -76,6 +82,7 @@ module NetSuite
             @internal_id = response.body[:@internal_id]
             true
           else
+            @error = response.body
             false
           end
         end
